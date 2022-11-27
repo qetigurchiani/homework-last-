@@ -3,7 +3,8 @@
 let data = [
   {
     id: 1,
-    imageurl: "https://cdn-images.farfetch-contents.com/13/04/05/78/13040578_14523363_1000.jpg",
+    imageurl:
+      "https://cdn-images.farfetch-contents.com/13/04/05/78/13040578_14523363_1000.jpg",
     slide: "MATSUDA M2903",
   },
   {
@@ -114,58 +115,54 @@ setInterval(() => {
 
 slide();
 
-
 // form validation
 
-let registrationForm = document.getElementById('registrationForm');
+let registrationForm = document.getElementById("registrationForm");
 
-
-registrationForm.addEventListener('submit', function(event){
+registrationForm.addEventListener("submit", function (event) {
   event.preventDefault();
   let errors = {};
 
-
   // username
-  let usernameValue = document.getElementById('usernameField').value;
-  if (usernameValue == ""){
-    errors.username = 'Username field can not be empty';
+  let usernameValue = document.getElementById("usernameField").value;
+  if (usernameValue == "") {
+    errors.username = "Username field can not be empty";
   }
 
   //password
-  let passwordValue = document.getElementById('passwordField').value;
-  let passwordValue2 = document.getElementById('passwordFieldRepeat').value;
-  
-  if (passwordValue == ""){
-    errors.password = 'Password field can not be empty' ;
+  let passwordValue = document.getElementById("passwordField").value;
+  let passwordValue2 = document.getElementById("passwordFieldRepeat").value;
+
+  if (passwordValue == "") {
+    errors.password = "Password field can not be empty";
   }
-  if (passwordValue !=passwordValue2){
-    errors.password2 = 'Passwords do not match';
+  if (passwordValue != passwordValue2) {
+    errors.password2 = "Passwords do not match";
   }
-  
-// checkbox
-let agreeField = document.getElementById('agreeTerms').checked;
 
-if(!agreeField){
-  errors.agree = 'You must agree out terms and conditions';
-}
-console.log(errors);
+  // checkbox
+  let agreeField = document.getElementById("agreeTerms").checked;
 
-document.querySelectorAll('.error-text').forEach(item =>{
-  item.textContent = " ";
-})
-
-for (let key in errors){
-  let spanText = document.getElementById('error-' + key );
-
-  if (spanText){
-    spanText.textContent = errors[key];
+  if (!agreeField) {
+    errors.agree = "You must agree out terms and conditions";
   }
-}
+  console.log(errors);
 
-if (Object.keys(errors).length == 0){
-  registrationForm.submit();
-}
+  document.querySelectorAll(".error-text").forEach((item) => {
+    item.textContent = " ";
+  });
 
+  for (let key in errors) {
+    let spanText = document.getElementById("error-" + key);
+
+    if (spanText) {
+      spanText.textContent = errors[key];
+    }
+  }
+
+  if (Object.keys(errors).length == 0) {
+    registrationForm.submit();
+  }
 });
 
 //show/hide
