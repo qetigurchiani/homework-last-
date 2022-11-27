@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+ <!-- slider -->
+      <section class="slider-wrapper">
+        <div class="slider-title">
+        </div>
+        <button class="arrow arrow-left" id="arrow-left"> <i class="fa-solid fa-backward"></i> </button>
+        <button class="arrow arrow-right" id="arrow-right"> <i class="fa-solid fa-forward"></i> </button>
+        <div class="slider-content" id="slider-content"></div>
+        </div>
+      </section>
+
+      <section>
+        <form action="" id="registrationForm" method="post">
+          <div>
+            <input type="text" name="username" id="usernameField">
+            <span class="error-text" id="error-username"></span>
+          </div>
+          <div>
+            <input type="password" name="password" id="passwordField">
+            <i id="togleIcon" class="fa-solid fa-eye"></i>
+            <span class="error-text" id="error-password"></span>
+          </div>
+          <div>
+            <input type="password" name="password2" id="passwordFieldRepeat" placeholder="Repeat Your Password">
+            <span class="error-text" id="error-password2"></span>
+          </div>
+          <div>
+            <input type="checkbox" name="agree" id="agreeTerms">
+            <label for="agreeTerms"> I Agree Terms And Conditions</label>
+            <span class="error-text" id="error-agree"></span>
+          </div>
+          <button type="submit"> Submit Form</button>
+       </section>
+
+</body>
+</html>
